@@ -4,6 +4,6 @@
 [submodule "kengine2d"]
 	path = KEngine2d
 	url = https://theK42@bitbucket.org/theK42/kengine2d.git
-[submodule "KEngineMac"]
-	path = kenginemac
+[submodule "kenginemac"]
+	path = KEngineMac
 	url = https://theK42@bitbucket.org/theK42/kenginemac.git
