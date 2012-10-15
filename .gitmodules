@@ -7,3 +7,6 @@
 [submodule "KEngineMac"]
 	path = KEngineMac
 	url = https://theK42@bitbucket.org/theK42/kenginemac.git
+[submodule "KEngineWindows"]
+	path = KEngineWindows
+	url = https://theK42@bitbucket.org/theK42/kenginewindows.git

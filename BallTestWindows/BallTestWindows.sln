@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BallTestWindows", "BallTestWindows.vcxproj", "{B6598C29-B9AF-4D6F-AB36-05016EFF1690}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CE87BA5A-9702-488D-B351-84DF10176776} = {CE87BA5A-9702-488D-B351-84DF10176776}
+		{3E115A9B-9B63-473A-BA4A-4524887B02D1} = {3E115A9B-9B63-473A-BA4A-4524887B02D1}
+		{3A2CF9B7-1E0F-4BBD-8D30-AA3486E543AB} = {3A2CF9B7-1E0F-4BBD-8D30-AA3486E543AB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KEngineWindows", "..\KEngineWindows\KEngineWindows.vcxproj", "{3E115A9B-9B63-473A-BA4A-4524887B02D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CE87BA5A-9702-488D-B351-84DF10176776} = {CE87BA5A-9702-488D-B351-84DF10176776}
+		{3A2CF9B7-1E0F-4BBD-8D30-AA3486E543AB} = {3A2CF9B7-1E0F-4BBD-8D30-AA3486E543AB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KEngine2D", "..\KEngine2D\KEngine2D.vcxproj", "{CE87BA5A-9702-488D-B351-84DF10176776}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3A2CF9B7-1E0F-4BBD-8D30-AA3486E543AB} = {3A2CF9B7-1E0F-4BBD-8D30-AA3486E543AB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KEngineCore", "..\KEngineCore\KEngineCore.vcxproj", "{3A2CF9B7-1E0F-4BBD-8D30-AA3486E543AB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{162D249D-152E-42AD-9D7C-FC40CA25705B} = {162D249D-152E-42AD-9D7C-FC40CA25705B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lua", "..\KEngineCore\Lua\Lua.vcxproj", "{162D249D-152E-42AD-9D7C-FC40CA25705B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6598C29-B9AF-4D6F-AB36-05016EFF1690}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B6598C29-B9AF-4D6F-AB36-05016EFF1690}.Debug|Win32.Build.0 = Debug|Win32
+		{B6598C29-B9AF-4D6F-AB36-05016EFF1690}.Release|Win32.ActiveCfg = Release|Win32
+		{B6598C29-B9AF-4D6F-AB36-05016EFF1690}.Release|Win32.Build.0 = Release|Win32
+		{3E115A9B-9B63-473A-BA4A-4524887B02D1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3E115A9B-9B63-473A-BA4A-4524887B02D1}.Debug|Win32.Build.0 = Debug|Win32
+		{3E115A9B-9B63-473A-BA4A-4524887B02D1}.Release|Win32.ActiveCfg = Release|Win32
+		{3E115A9B-9B63-473A-BA4A-4524887B02D1}.Release|Win32.Build.0 = Release|Win32
+		{CE87BA5A-9702-488D-B351-84DF10176776}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CE87BA5A-9702-488D-B351-84DF10176776}.Debug|Win32.Build.0 = Debug|Win32
+		{CE87BA5A-9702-488D-B351-84DF10176776}.Release|Win32.ActiveCfg = Release|Win32
+		{CE87BA5A-9702-488D-B351-84DF10176776}.Release|Win32.Build.0 = Release|Win32
+		{3A2CF9B7-1E0F-4BBD-8D30-AA3486E543AB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3A2CF9B7-1E0F-4BBD-8D30-AA3486E543AB}.Debug|Win32.Build.0 = Debug|Win32
+		{3A2CF9B7-1E0F-4BBD-8D30-AA3486E543AB}.Release|Win32.ActiveCfg = Release|Win32
+		{3A2CF9B7-1E0F-4BBD-8D30-AA3486E543AB}.Release|Win32.Build.0 = Release|Win32
+		{162D249D-152E-42AD-9D7C-FC40CA25705B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{162D249D-152E-42AD-9D7C-FC40CA25705B}.Debug|Win32.Build.0 = Debug|Win32
+		{162D249D-152E-42AD-9D7C-FC40CA25705B}.Release|Win32.ActiveCfg = Release|Win32
+		{162D249D-152E-42AD-9D7C-FC40CA25705B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

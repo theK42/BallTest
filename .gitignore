@@ -8,6 +8,9 @@
 *.so
 
 # User specific project files #
+*.opensdf
+*.sdf
+*.suo
 *.vcxproj.filters
 *.vcxproj.user
 *.xcuserstate
@@ -42,3 +45,8 @@ xcuserdata
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# build directories #
+#####################
+Debug
+Release
