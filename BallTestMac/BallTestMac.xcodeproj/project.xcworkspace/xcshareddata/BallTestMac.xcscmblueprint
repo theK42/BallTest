@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "68937112451115C175A149FA97D9B8CD73188BA6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "1CAFF2B3E7B856CD1DC71925BC679883F8FB20F2" : 9223372036854775807,
+    "A843BACE634243E6383B7158E59C8D76A4C133CB" : 9223372036854775807,
+    "BD28B094FC60A4FA7730FB7283868BC3429C9301" : 9223372036854775807,
+    "68937112451115C175A149FA97D9B8CD73188BA6" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "06ED8E86-E0B5-4B13-86B3-4E847B53D8B0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "1CAFF2B3E7B856CD1DC71925BC679883F8FB20F2" : "balltest\/KEngine2D\/",
+    "A843BACE634243E6383B7158E59C8D76A4C133CB" : "balltest\/KEngineCore\/",
+    "BD28B094FC60A4FA7730FB7283868BC3429C9301" : "balltest\/KEngineMac\/",
+    "68937112451115C175A149FA97D9B8CD73188BA6" : "balltest\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "BallTestMac",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "BallTestMac\/BallTestMac.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:theK42\/kengine2d.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1CAFF2B3E7B856CD1DC71925BC679883F8FB20F2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:theK42\/balltest.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "68937112451115C175A149FA97D9B8CD73188BA6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:theK42\/kenginecore.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A843BACE634243E6383B7158E59C8D76A4C133CB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:theK42\/kenginemac.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BD28B094FC60A4FA7730FB7283868BC3429C9301"
+    }
+  ]
+}
