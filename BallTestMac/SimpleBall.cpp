@@ -1,7 +1,7 @@
 #include "SimpleBall.h"
 #include <assert.h>
 
-static KEngineMac::CharMap circleMaps[] = {
+static KEngineCurses::CharMap circleMaps[] = {
 	{1,1,	"O"}, //Radius .5 and below
 
 	{2,2,	"OO"
@@ -67,7 +67,7 @@ SimpleBall::~SimpleBall()
 	Deinit();
 }
 
-void SimpleBall::Init(KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::PhysicsSystem * physicsSystem, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineMac::ConsoleRenderer * renderer, KEngine2D::Point position, KEngine2D::Point velocity, float radius, float mass)
+void SimpleBall::Init(KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::PhysicsSystem * physicsSystem, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineCurses::CursesRenderer * renderer, KEngine2D::Point position, KEngine2D::Point velocity, float radius, float mass)
 {
 	KEngine2D::StaticTransform initialTransform(position);
 	mMechanics.Init(mechanicsSystem, position, velocity);

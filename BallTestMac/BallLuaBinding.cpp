@@ -70,7 +70,7 @@ int luaopen_ball (lua_State * luaState) {
 	return 1;
 };
 
-void BallLuaBinding::Init(lua_State * luaState, KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::PhysicsSystem * physicsSystem, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineMac::ConsoleRenderer * renderer) {
+void BallLuaBinding::Init(lua_State * luaState, KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::PhysicsSystem * physicsSystem, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineCurses::CursesRenderer * renderer) {
 	assert(mInstance == nullptr);
 	mInstance = this;
 	mLuaState = luaState;

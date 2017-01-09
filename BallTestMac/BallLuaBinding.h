@@ -8,8 +8,8 @@ namespace KEngine2D {
 	struct Point;
 }
 
-namespace KEngineMac {
-	class ConsoleRenderer;
+namespace KEngineCurses {
+	class CursesRenderer;
 }
 
 class SimpleBall;
@@ -19,7 +19,7 @@ class BallLuaBinding
 public:
 	BallLuaBinding(void);
 	~BallLuaBinding(void);
-	void Init(lua_State * luaState, KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::PhysicsSystem * physicsSystem, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineMac::ConsoleRenderer * renderer);
+	void Init(lua_State * luaState, KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::PhysicsSystem * physicsSystem, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineCurses::CursesRenderer * renderer);
 	void Deinit();
 	static BallLuaBinding * GetInstance();
 
@@ -29,7 +29,7 @@ private:
 	KEngine2D::MechanicsUpdater *		mMechanicsSystem;
 	KEngine2D::PhysicsSystem *			mPhysicsSystem;
 	KEngine2D::HierarchyUpdater *		mHierarchySystem;
-	KEngineMac::ConsoleRenderer *		mRenderer;
+	KEngineCurses::CursesRenderer *     mRenderer;
 	static BallLuaBinding *				mInstance;
 
 };

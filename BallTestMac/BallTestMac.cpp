@@ -8,7 +8,7 @@
 
 #include <sys/time.h>
 
-#include "ConsoleRenderer.h"
+#include "CursesRenderer.h"
 #include "StaticTransform2D.h"
 #include "MechanicalTransform2D.h"
 #include "HierarchicalTransform2D.h"
@@ -37,7 +37,7 @@ int main(int argc, const char * argv[])
 	KEngine2D::HierarchyUpdater		hierarchySystem;
 	KEngine2D::MechanicsUpdater		mechanicsSystem;
 	KEngine2D::PhysicsSystem		physicsSystem;
-	KEngineMac::ConsoleRenderer		renderer;
+	KEngineCurses::CursesRenderer	renderer;
 
 	luaScheduler.Init();
 	timer.Init(&luaScheduler);

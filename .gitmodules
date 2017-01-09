@@ -10,3 +10,6 @@
 [submodule "KEngineWindows"]
 	path = KEngineWindows
 	url = git@bitbucket.org:theK42/kenginewindows.git
+[submodule "KEngineCurses"]
+	path = KEngineCurses
+	url = git@bitbucket.org:theK42/kenginecurses.git

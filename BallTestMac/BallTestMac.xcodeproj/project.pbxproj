@@ -7,17 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68433DF81E1B6E6600BD13E1 /* libKEngineCurses.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68433DF71E1B6AC300BD13E1 /* libKEngineCurses.a */; };
+		68F09DB11E235A3F003B00D8 /* libncurses.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 68F09DB01E235A3F003B00D8 /* libncurses.tbd */; };
 		943BDEFE1622A42000B3AAB6 /* BallLuaBinding.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 943BDEF81622A42000B3AAB6 /* BallLuaBinding.cpp */; };
 		943BDEFF1622A42000B3AAB6 /* BallTestMac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 943BDEFA1622A42000B3AAB6 /* BallTestMac.cpp */; };
 		943BDF001622A42000B3AAB6 /* SimpleBall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 943BDEFC1622A42000B3AAB6 /* SimpleBall.cpp */; };
 		943BDF011622A4EA00B3AAB6 /* libKEngine2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 943BDED71622A12D00B3AAB6 /* libKEngine2D.a */; };
 		943BDF021622A4EA00B3AAB6 /* libKEngineCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 943BDEDA1622A12D00B3AAB6 /* libKEngineCore.a */; };
-		943BDF031622A4EA00B3AAB6 /* libKEngineMac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 943BDEDD1622A12D00B3AAB6 /* libKEngineMac.a */; };
-		943BDF0C1622A55000B3AAB6 /* libncurses.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94F1A4F1161FAA97006758A5 /* libncurses.dylib */; };
 		943BDF0D1622A5DB00B3AAB6 /* script.lua in CopyFiles */ = {isa = PBXBuildFile; fileRef = 943BDEFB1622A42000B3AAB6 /* script.lua */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		68433DF61E1B6AC300BD13E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68433DF21E1B6AC300BD13E1 /* KEngineCurses.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 68433DE71E1B67BA00BD13E1;
+			remoteInfo = KEngineCurses;
+		};
 		943BDED61622A12D00B3AAB6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 943BDEBF1622A12C00B3AAB6 /* KEngine2D.xcodeproj */;
@@ -31,13 +38,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 94AF46FC15F2E0B000250F3F;
 			remoteInfo = KEngineCore;
-		};
-		943BDEDC1622A12D00B3AAB6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 943BDEC51622A12C00B3AAB6 /* KEngineMac.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 94AF46CC15F2DE6000250F3F;
-			remoteInfo = KEngineMac;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -64,16 +64,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		68433DF21E1B6AC300BD13E1 /* KEngineCurses.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KEngineCurses.xcodeproj; path = ../KEngineCurses/KEngineCurses.xcodeproj; sourceTree = "<group>"; };
+		68F09DB01E235A3F003B00D8 /* libncurses.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libncurses.tbd; path = usr/lib/libncurses.tbd; sourceTree = SDKROOT; };
 		943BDEBF1622A12C00B3AAB6 /* KEngine2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KEngine2D.xcodeproj; path = ../KEngine2d/KEngine2D.xcodeproj; sourceTree = "<group>"; };
 		943BDEC21622A12C00B3AAB6 /* KEngineCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KEngineCore.xcodeproj; path = ../KEngineCore/KEngineCore.xcodeproj; sourceTree = "<group>"; };
-		943BDEC51622A12C00B3AAB6 /* KEngineMac.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KEngineMac.xcodeproj; path = ../KEngineMac/KEngineMac.xcodeproj; sourceTree = "<group>"; };
 		943BDEF81622A42000B3AAB6 /* BallLuaBinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BallLuaBinding.cpp; sourceTree = "<group>"; };
 		943BDEF91622A42000B3AAB6 /* BallLuaBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallLuaBinding.h; sourceTree = "<group>"; };
 		943BDEFA1622A42000B3AAB6 /* BallTestMac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BallTestMac.cpp; sourceTree = "<group>"; };
 		943BDEFB1622A42000B3AAB6 /* script.lua */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = script.lua; sourceTree = "<group>"; };
 		943BDEFC1622A42000B3AAB6 /* SimpleBall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleBall.cpp; sourceTree = "<group>"; };
 		943BDEFD1622A42000B3AAB6 /* SimpleBall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBall.h; sourceTree = "<group>"; };
-		94F1A4F1161FAA97006758A5 /* libncurses.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libncurses.dylib; path = usr/lib/libncurses.dylib; sourceTree = SDKROOT; };
 		94F1A510161FB019006758A5 /* BallTestMac */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BallTestMac; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,16 +82,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				943BDF0C1622A55000B3AAB6 /* libncurses.dylib in Frameworks */,
+				68F09DB11E235A3F003B00D8 /* libncurses.tbd in Frameworks */,
+				68433DF81E1B6E6600BD13E1 /* libKEngineCurses.a in Frameworks */,
 				943BDF011622A4EA00B3AAB6 /* libKEngine2D.a in Frameworks */,
 				943BDF021622A4EA00B3AAB6 /* libKEngineCore.a in Frameworks */,
-				943BDF031622A4EA00B3AAB6 /* libKEngineMac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68433DF31E1B6AC300BD13E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68433DF71E1B6AC300BD13E1 /* libKEngineCurses.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68F09DAF1E235A3F003B00D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68F09DB01E235A3F003B00D8 /* libncurses.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		943BDEC01622A12C00B3AAB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,21 +124,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		943BDEC61622A12C00B3AAB6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				943BDEDD1622A12D00B3AAB6 /* libKEngineMac.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		94AF46A915F2DC6200250F3F = {
 			isa = PBXGroup;
 			children = (
+				68433DF21E1B6AC300BD13E1 /* KEngineCurses.xcodeproj */,
 				943BDEBF1622A12C00B3AAB6 /* KEngine2D.xcodeproj */,
 				943BDEC21622A12C00B3AAB6 /* KEngineCore.xcodeproj */,
-				943BDEC51622A12C00B3AAB6 /* KEngineMac.xcodeproj */,
-				94F1A4F1161FAA97006758A5 /* libncurses.dylib */,
 				943BDEF81622A42000B3AAB6 /* BallLuaBinding.cpp */,
 				943BDEF91622A42000B3AAB6 /* BallLuaBinding.h */,
 				943BDEFA1622A42000B3AAB6 /* BallTestMac.cpp */,
@@ -130,6 +137,7 @@
 				943BDEFC1622A42000B3AAB6 /* SimpleBall.cpp */,
 				943BDEFD1622A42000B3AAB6 /* SimpleBall.h */,
 				94AF46B515F2DC6200250F3F /* Products */,
+				68F09DAF1E235A3F003B00D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,8 +198,8 @@
 					ProjectRef = 943BDEC21622A12C00B3AAB6 /* KEngineCore.xcodeproj */;
 				},
 				{
-					ProductGroup = 943BDEC61622A12C00B3AAB6 /* Products */;
-					ProjectRef = 943BDEC51622A12C00B3AAB6 /* KEngineMac.xcodeproj */;
+					ProductGroup = 68433DF31E1B6AC300BD13E1 /* Products */;
+					ProjectRef = 68433DF21E1B6AC300BD13E1 /* KEngineCurses.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -202,6 +210,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		68433DF71E1B6AC300BD13E1 /* libKEngineCurses.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKEngineCurses.a;
+			remoteRef = 68433DF61E1B6AC300BD13E1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		943BDED71622A12D00B3AAB6 /* libKEngine2D.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -214,13 +229,6 @@
 			fileType = archive.ar;
 			path = libKEngineCore.a;
 			remoteRef = 943BDED91622A12D00B3AAB6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		943BDEDD1622A12D00B3AAB6 /* libKEngineMac.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libKEngineMac.a;
-			remoteRef = 943BDEDC1622A12D00B3AAB6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -294,9 +302,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				HEADER_SEARCH_PATHS = (
-					../KEngineMac,
 					../KEngine2D,
 					../KEngineCore,
+					../KEngineCurses,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -313,9 +321,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				HEADER_SEARCH_PATHS = (
-					../KEngineMac,
 					../KEngine2D,
 					../KEngineCore,
+					../KEngineCurses,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
