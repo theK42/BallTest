@@ -1,4 +1,5 @@
 #include "SimpleBall.h"
+#include <cmath>
 #include <assert.h>
 
 static KEngineCurses::CharMap circleMaps[] = {
