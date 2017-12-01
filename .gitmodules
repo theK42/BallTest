@@ -13,3 +13,6 @@
 [submodule "KEngineCurses"]
 	path = KEngineCurses
 	url = git@bitbucket.org:theK42/kenginecurses.git
+[submodule "KEngineOpenGL"]
+	path = KEngineOpenGL
+	url = git@bitbucket.org:theK42/kengineopengl.git
