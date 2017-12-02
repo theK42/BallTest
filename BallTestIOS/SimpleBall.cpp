@@ -19,18 +19,18 @@ void SimpleBall::Init(KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::
 	KEngine2D::StaticTransform initialTransform(position);
 	mMechanics.Init(mechanicsSystem, position, velocity);
 
-	mBoundary.Init(&mMechanics.Get(), radius);
+	mBoundary.Init(&mMechanics, radius);
 	
 	std::vector<KEngine2D::BoundingCircle *> bounds(1, &mBoundary);
 
-	mPhysics.Init(physicsSystem, &mMechanics.Get(), bounds, mass);
+	mPhysics.Init(physicsSystem, &mMechanics, bounds, mass);
     
     KEngine2D::Point modelUpperLeft = {-radius, -radius};
 	KEngine2D::StaticTransform modelTransform(modelUpperLeft);
 
-	mModelTransform.Init(hierarchySystem, &mMechanics.Get(), modelTransform); 
+	mModelTransform.Init(hierarchySystem, &mMechanics, modelTransform);
 
-	mGraphic.Init(renderer, spriteFactory->BallSpriteForRadius(radius), &mModelTransform.Get());
+	mGraphic.Init(renderer, spriteFactory->BallSpriteForRadius(radius), &mModelTransform);
     
 	mInitialized = true;
 }
