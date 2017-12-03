@@ -2,12 +2,6 @@
 //
 
 
-/*int _tmain(int argc, _TCHAR* argv[])
-{
-	return 0;
-}
-*/
-
 #include <windows.h>
 #include "ConsoleRenderer.h"
 #include "StaticTransform2D.h"
