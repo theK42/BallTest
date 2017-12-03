@@ -95,7 +95,7 @@ int WINAPI WinMain(
 	ballBinding.Init(luaScheduler.GetMainState(), &mechanicsSystem, &physicsSystem, &hierarchySystem, &renderer);
 
 	KEngineCore::ScheduledLuaThread mainThread;
-	mainThread.Init(&luaScheduler, "script.lua", true);
+	mainThread.Init(&luaScheduler, "script", true);
 		
 	DWORD previousTime = GetTickCount();
 
