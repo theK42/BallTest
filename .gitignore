@@ -13,6 +13,8 @@
 *.suo
 *.vcxproj.filters
 *.vcxproj.user
+*.VC.db
+*.VC.opendb
 *.xcuserstate
 xcuserdata
 
