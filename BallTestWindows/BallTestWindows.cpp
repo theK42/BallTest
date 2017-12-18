@@ -50,7 +50,6 @@ int WINAPI WinMain(
 	std::ios::sync_with_stdio();
 
 
-//int main()
 	KEngineCore::LuaScheduler		luaScheduler;
 	KEngineCore::Timer				timer;
 	KEngine2D::HierarchyUpdater		hierarchySystem;
