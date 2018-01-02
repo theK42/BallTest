@@ -6,7 +6,7 @@
 //  Copyright © 2017 Kelson Hootman. All rights reserved.
 //
 
-#include "BallSprite.h"
+#include "SpriteFactory.h"
 #include "OpenGLUtils.h"
 #include "ShaderFactory.h"
 #include "StringHash.h"
@@ -14,13 +14,13 @@
 #include <cmath>
 #include <assert.h>
 
-void BallSpriteFactory::Init(KEngineOpenGL::ShaderFactory * shaderFactory)
+void SpriteFactory::Init(KEngineOpenGL::ShaderFactory * shaderFactory)
 {
     mShaderFactory = shaderFactory;
     shaderFactory->CreateShaderProgram(HASH("Rainball", 0x036F6C7A), "basic.vertex", "circlecolor.fragment");
 }
 
-const KEngineOpenGL::Sprite * BallSpriteFactory::BallSpriteForRadius(float radius)
+const KEngineOpenGL::Sprite * SpriteFactory::BallSpriteForRadius(float radius)
 {
     assert(mShaderFactory != nullptr);
     float diameter = round(radius * 2);

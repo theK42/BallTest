@@ -15,7 +15,7 @@ namespace KEngineOpenGL {
     class ShaderFactory;
 }
 
-class BallSpriteFactory
+class SpriteFactory
 {
 public:
     void Init(KEngineOpenGL::ShaderFactory* shaderFactory);

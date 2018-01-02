@@ -75,8 +75,10 @@ void SimpleBall::Init(KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::
 	mBoundary.Init(&mMechanics, radius);
 	
 	std::vector<KEngine2D::BoundingCircle *> bounds(1, &mBoundary);
+	mBoundingArea.Init(&mMechanics);
+	mBoundingArea.AddBoundingCircle(&mBoundary);
 
-	mPhysics.Init(physicsSystem, &mMechanics, bounds, mass);
+	mPhysics.Init(physicsSystem, &mMechanics, &mBoundingArea, mass);
 
 	KEngine2D::Point modelUpperLeft = {-radius, -radius};
 	KEngine2D::StaticTransform modelTransform(modelUpperLeft);

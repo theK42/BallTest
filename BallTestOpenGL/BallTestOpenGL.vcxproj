@@ -93,7 +93,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkStatus>false</LinkStatus>
       <ShowProgress>LinkVerbose</ShowProgress>
     </Link>
@@ -148,18 +148,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BallLuaBinding.h" />
-    <ClInclude Include="BallSprite.h" />
+    <ClInclude Include="SpriteFactory.h" />
     <ClInclude Include="BallTestOpenGL.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SimpleBall.h" />
+    <ClInclude Include="SimpleBox.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BallLuaBinding.cpp" />
-    <ClCompile Include="BallSprite.cpp" />
+    <ClCompile Include="SpriteFactory.cpp" />
     <ClCompile Include="BallTestOpenGL.cpp" />
     <ClCompile Include="SimpleBall.cpp" />
+    <ClCompile Include="SimpleBox.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -190,6 +192,12 @@
     <ProjectReference Include="..\KEngineOpenGL\KEngineOpenGL.vcxproj">
       <Project>{04a2f0dd-9cb1-40bc-86b5-a8147b1d3132}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="basic.vertex.glsl" />
+    <None Include="circlecolor.fragment.glsl" />
+    <None Include="script.lua" />
+    <None Include="textured.fragment.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

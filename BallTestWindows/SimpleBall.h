@@ -18,6 +18,7 @@ public:
 private:
 	KEngine2D::UpdatingMechanicalTransform		mMechanics;
 	KEngine2D::UpdatingHierarchicalTransform	mModelTransform;
+	KEngine2D::BoundingArea						mBoundingArea;
 	KEngine2D::BoundingCircle					mBoundary;
 	KEngine2D::PhysicalObject					mPhysics;
 	KEngineWindows::ConsoleGraphic				mGraphic;

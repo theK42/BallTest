@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "SimpleBall.h"
-#include "BallSprite.h"
+#include "SpriteFactory.h"
 #include <assert.h>
 
 SimpleBall::SimpleBall()
@@ -13,16 +13,16 @@ SimpleBall::~SimpleBall()
 	Deinit();
 }
 
-void SimpleBall::Init(KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::PhysicsSystem * physicsSystem, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineOpenGL::SpriteRenderer * renderer, BallSpriteFactory * spriteFactory, KEngine2D::Point position, KEngine2D::Point velocity, double radius, double mass)
+void SimpleBall::Init(KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::PhysicsSystem * physicsSystem, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineOpenGL::SpriteRenderer * renderer, SpriteFactory * spriteFactory, KEngine2D::Point position, KEngine2D::Point velocity, double angularVelocity, double radius, double mass)
 {
 	KEngine2D::StaticTransform initialTransform(position);
-	mMechanics.Init(mechanicsSystem, position, velocity);
+	mMechanics.Init(mechanicsSystem, position, velocity, angularVelocity);
 
 	mBoundary.Init(&mMechanics, radius);
-	
-	std::vector<KEngine2D::BoundingCircle *> bounds(1, &mBoundary);
+	mBoundingArea.Init(&mMechanics);
+	mBoundingArea.AddBoundingCircle(&mBoundary);
 
-	mPhysics.Init(physicsSystem, &mMechanics, bounds, mass);
+	mPhysics.Init(physicsSystem, &mMechanics, &mBoundingArea, mass);
 
 	KEngine2D::Point modelUpperLeft = {-radius, -radius};
 	KEngine2D::StaticTransform modelTransform(modelUpperLeft);

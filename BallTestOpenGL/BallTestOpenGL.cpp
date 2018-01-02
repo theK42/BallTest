@@ -17,7 +17,8 @@
 #include "LuaScheduler.h"
 #include "Timer.h"
 #include "ShaderFactory.h"
-#include "BallSprite.h"
+#include "TextureFactory.h"
+#include "SpriteFactory.h"
 #include "OpenGLUtils.h"
 
 
@@ -89,7 +90,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	int width = 800;
 	int height = 600;
 	// Perform application initialization:
-	HWND hWnd = InitInstance(hInstance, nCmdShow, width, height);
+	HWND hWnd = InitInstance(hInstance, nCmdShow, width + 10, height + 50);
     if (!hWnd)
     {
         return FALSE;
@@ -138,7 +139,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	KEngine2D::PhysicsSystem        physicsSystem;
 	KEngineOpenGL::SpriteRenderer   renderer;
 	KEngineOpenGL::ShaderFactory    shaderFactory;
-	BallSpriteFactory               spriteFactory;
+	KEngineOpenGL::TextureFactory	textureFactory;
+	SpriteFactory               spriteFactory;
 
 	KEngine2D::RendererBinding      rendererBinding;
 	BallLuaBinding                  ballBinding;
@@ -156,7 +158,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	physicsSystem.Init();
 	hierarchySystem.Init();
 	shaderFactory.Init();
-	spriteFactory.Init(&shaderFactory);
+	textureFactory.Init();
+	spriteFactory.Init(&shaderFactory, &textureFactory);
 
 	renderer.Init(width, height);//frame.size.width, frame.size.height);
 

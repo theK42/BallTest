@@ -1,5 +1,5 @@
 //
-//  BallSprite.h
+//  SpriteFactory.h
 //  BallTestIOS
 //
 //  Created by Kelson Hootman on 11/26/17.
@@ -13,18 +13,22 @@
 
 namespace KEngineOpenGL {
     class ShaderFactory;
+	class TextureFactory;
 }
 
-class BallSpriteFactory
+class SpriteFactory
 {
 public:
-    void Init(KEngineOpenGL::ShaderFactory* shaderFactory);
+    void Init(KEngineOpenGL::ShaderFactory* shaderFactory, KEngineOpenGL::TextureFactory* textureFactory);
     const KEngineOpenGL::Sprite* BallSpriteForRadius(float radius);
+	const KEngineOpenGL::Sprite* BoxSpriteForDimensions(float width, float height);
 private:
     std::map<int, KEngineOpenGL::Sprite> mBallSprites;
+	std::map<std::pair<int, int>, KEngineOpenGL::Sprite> mBoxSprites;
     bool  mInitialized {false};
     GLint mBallShaderProgram;
     
     KEngineOpenGL::ShaderFactory * mShaderFactory;
+	KEngineOpenGL::TextureFactory * mTextureFactory;
 };
 
