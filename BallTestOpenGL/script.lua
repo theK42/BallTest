@@ -6,38 +6,18 @@ local timer = require "timer"
 local worldWidth, worldHeight = renderer.getDimensions();
 
 local center = {x = worldWidth / 2, y = worldHeight / 2};
-local westofCenter = {x = worldWidth / 3, y = worldHeight / 2};
---local westofCenter = {x = worldWidth / 3, y = worldHeight / 2};
+local westofCenter = {x = worldWidth / 3, y = (worldHeight / 2)};
 local northofCenter = {x = worldWidth / 2, y = worldHeight / 3};
 
-local west = {vx = -10.0, vy = 0.0};
-local east = {vx = 10.0, vy = 0.0};
+local west = {vx = -20.0, vy = 0.0};
+local east = {vx = 20.0, vy = 0.0};
 local north = {vx = 0.0, vy = 20.0};
 
 local stationary = {vx = 0.0, vy = 0.0};
 --local stationaryBall = ballTest.newBall(center, stationary, 50, 500);
 
---[[local box = ballTest.newBox(center, stationary, 0, 50, 50, 500);
-
-	timer.waits(1);
-	ballTest.hitBox(box, {ix = -20000, iy =0, ox = 50, oy = 50})
-while (true) do
-	timer.waits(1);
-	ballTest.hitBox(box, {ix = 40000, iy =0, ox = 50, oy = 50});
-	timer.waits(1);
-	ballTest.hitBox(box, {ix = -40000, iy =0, ox = 50, oy = 50});
-end]]--
-
-local box1 = ballTest.newBox(center, west, 0, 50, 50, 500);
-local box2 = ballTest.newBox(westofCenter, east, 0, 50, 50, 500);
-
---[[
-local ball1 = ballTest.newBall(center, west, 0, 5, 1.0);
-timer.waits(1);
-local ball2 = ballTest.newBall(westofCenter, 0, east, 10, 2.0);
-timer.waits(1);
-local ball3 = ballTest.newBall(northofCenter, 0, north, 45, 10.0);
-]]--
+--local box1 = ballTest.newBox(center, west, 0, 50, 50, 500);
+--local box2 = ballTest.newBox(westofCenter, east, 0, 50, 50, 500);
 
 local doBalls = true;
 
@@ -60,9 +40,9 @@ function randomBox()
 end
 
 while doBalls do 
-	--randomBox();
-	--timer.waits(1);
-	--randomBall();
+	randomBox();
+	timer.waits(1);
+	randomBall();
 	timer.waits(1);
 end
 

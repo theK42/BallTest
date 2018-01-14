@@ -8,6 +8,10 @@ namespace KEngine2D {
 	struct Point;
 }
 
+namespace KEngineBox2D {
+	class Box2DWorld;
+}
+
 namespace KEngineOpenGL {
 	class SpriteRenderer;
 }
@@ -20,7 +24,7 @@ class BallLuaBinding
 public:
 	BallLuaBinding(void);
 	~BallLuaBinding(void);
-	void Init(lua_State * luaState, KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::PhysicsSystem * physicsSystem, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineOpenGL::SpriteRenderer * renderer, SpriteFactory * spriteFactory);
+	void Init(lua_State * luaState, KEngineBox2D::Box2DWorld * boxWorld, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineOpenGL::SpriteRenderer * renderer, SpriteFactory * spriteFactory);
 	void Deinit();
 	static BallLuaBinding * GetInstance();
 
@@ -28,8 +32,7 @@ public:
 	SimpleBox * NewBox( KEngine2D::Point & position, KEngine2D::Point & velocity, double angularVelocity, double width, double height, double mass);
 private:
 	lua_State *							mLuaState;
-	KEngine2D::MechanicsUpdater *		mMechanicsSystem;
-	KEngine2D::PhysicsSystem *			mPhysicsSystem;
+	KEngineBox2D::Box2DWorld *			mBoxWorld;
 	KEngine2D::HierarchyUpdater *		mHierarchySystem;
 	KEngineOpenGL::SpriteRenderer *		mRenderer;
 	SpriteFactory *						mSpriteFactory;

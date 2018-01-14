@@ -49,6 +49,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glew_static", "..\KEngineOp
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SOIL", "..\KEngineOpenGL\SOIL\SOIL.vcxproj", "{C32FB2B4-500C-43CD-A099-EECCE079D3F1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Box2D", "..\KEngineBox2D\Box2D.vcxproj", "{140CCD77-24A5-4204-A36E-6CABDE8D4047}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KEngineBox2D", "..\KEngineBox2D\KEngineBox2D.vcxproj", "{A25357D6-1594-40C4-B2A4-DCEB07B36734}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
@@ -139,6 +143,26 @@ Global
 		{C32FB2B4-500C-43CD-A099-EECCE079D3F1}.Release|Win32.Build.0 = Release|Win32
 		{C32FB2B4-500C-43CD-A099-EECCE079D3F1}.Release|x64.ActiveCfg = Release|x64
 		{C32FB2B4-500C-43CD-A099-EECCE079D3F1}.Release|x64.Build.0 = Release|x64
+		{140CCD77-24A5-4204-A36E-6CABDE8D4047}.Debug|ARM.ActiveCfg = Debug|Win32
+		{140CCD77-24A5-4204-A36E-6CABDE8D4047}.Debug|Win32.ActiveCfg = Debug|Win32
+		{140CCD77-24A5-4204-A36E-6CABDE8D4047}.Debug|Win32.Build.0 = Debug|Win32
+		{140CCD77-24A5-4204-A36E-6CABDE8D4047}.Debug|x64.ActiveCfg = Debug|x64
+		{140CCD77-24A5-4204-A36E-6CABDE8D4047}.Debug|x64.Build.0 = Debug|x64
+		{140CCD77-24A5-4204-A36E-6CABDE8D4047}.Release|ARM.ActiveCfg = Release|Win32
+		{140CCD77-24A5-4204-A36E-6CABDE8D4047}.Release|Win32.ActiveCfg = Release|Win32
+		{140CCD77-24A5-4204-A36E-6CABDE8D4047}.Release|Win32.Build.0 = Release|Win32
+		{140CCD77-24A5-4204-A36E-6CABDE8D4047}.Release|x64.ActiveCfg = Release|x64
+		{140CCD77-24A5-4204-A36E-6CABDE8D4047}.Release|x64.Build.0 = Release|x64
+		{A25357D6-1594-40C4-B2A4-DCEB07B36734}.Debug|ARM.ActiveCfg = Debug|Win32
+		{A25357D6-1594-40C4-B2A4-DCEB07B36734}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A25357D6-1594-40C4-B2A4-DCEB07B36734}.Debug|Win32.Build.0 = Debug|Win32
+		{A25357D6-1594-40C4-B2A4-DCEB07B36734}.Debug|x64.ActiveCfg = Debug|x64
+		{A25357D6-1594-40C4-B2A4-DCEB07B36734}.Debug|x64.Build.0 = Debug|x64
+		{A25357D6-1594-40C4-B2A4-DCEB07B36734}.Release|ARM.ActiveCfg = Release|Win32
+		{A25357D6-1594-40C4-B2A4-DCEB07B36734}.Release|Win32.ActiveCfg = Release|Win32
+		{A25357D6-1594-40C4-B2A4-DCEB07B36734}.Release|Win32.Build.0 = Release|Win32
+		{A25357D6-1594-40C4-B2A4-DCEB07B36734}.Release|x64.ActiveCfg = Release|x64
+		{A25357D6-1594-40C4-B2A4-DCEB07B36734}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

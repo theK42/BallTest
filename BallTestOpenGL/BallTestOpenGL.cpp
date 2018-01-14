@@ -7,10 +7,8 @@
 
 #include "SpriteRenderer.h"
 #include "StaticTransform2D.h"
-#include "MechanicalTransform2D.h"
 #include "HierarchicalTransform2D.h"
 #include "Boundaries2D.h"
-#include "Physics2D.h"
 #include "SimpleBall.h"
 #include "RendererLuaBinding.h"
 #include "BallLuaBinding.h"
@@ -20,6 +18,7 @@
 #include "TextureFactory.h"
 #include "SpriteFactory.h"
 #include "OpenGLUtils.h"
+#include "Box2DTransform.h"
 
 
 #include <GL/gl.h>			/* OpenGL header file */
@@ -135,8 +134,9 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	KEngineCore::LuaScheduler       luaScheduler;
 	KEngineCore::Timer              timer;
 	KEngine2D::HierarchyUpdater     hierarchySystem;
-	KEngine2D::MechanicsUpdater     mechanicsSystem;
-	KEngine2D::PhysicsSystem        physicsSystem;
+
+	KEngineBox2D::Box2DWorld		box2dWorld;
+
 	KEngineOpenGL::SpriteRenderer   renderer;
 	KEngineOpenGL::ShaderFactory    shaderFactory;
 	KEngineOpenGL::TextureFactory	textureFactory;
@@ -154,8 +154,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
 	luaScheduler.Init();
 	timer.Init(&luaScheduler);
-	mechanicsSystem.Init();
-	physicsSystem.Init();
 	hierarchySystem.Init();
 	shaderFactory.Init();
 	textureFactory.Init();
@@ -163,18 +161,16 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
 	renderer.Init(width, height);//frame.size.width, frame.size.height);
 
-	westBorder.Init(1.0f, 0.0f, 0.0f); //x = 0
-	physicsSystem.AddBoundary(&westBorder);
-	eastBorder.Init(-1.0f, 0.0f, width); //-x + WIDTH = 0
-	physicsSystem.AddBoundary(&eastBorder);
-	northBorder.Init(0.0f, 1.0f, 0.0f); // y = 0
-	physicsSystem.AddBoundary(&northBorder);
-	southBorder.Init(0.0f, -1.0f, height); //-y + HEIGHT = 0
-	physicsSystem.AddBoundary(&southBorder);
-
 	rendererBinding.Init(luaScheduler.GetMainState(), &renderer);
 
-	ballBinding.Init(luaScheduler.GetMainState(), &mechanicsSystem, &physicsSystem, &hierarchySystem, &renderer, &spriteFactory);
+	box2dWorld.Init({ 0,9.8 });
+	box2dWorld.AddWall({ 0.0f,0.0f }, { (double)width,0.0f }, {0, -50});
+	box2dWorld.AddWall({ (double)width,0 }, { (double)width,(double)height }, { 50, 0 });
+	box2dWorld.AddWall({ (double)width, (double)height }, { 0,(double)height }, { 0, 50 });
+	box2dWorld.AddWall({ 0,(double)height }, { 0,0 }, { -50, 0 });
+
+
+	ballBinding.Init(luaScheduler.GetMainState(), &box2dWorld, &hierarchySystem, &renderer, &spriteFactory);
 
 	mainThread.Init(&luaScheduler, "script", true);
 
@@ -199,9 +195,8 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 			double elapsedTimeInSeconds = elapsedTime / 1000.0f;
 			timer.Update(elapsedTimeInSeconds);
 			luaScheduler.Update();
-			mechanicsSystem.Update(elapsedTimeInSeconds);
+			box2dWorld.Update(elapsedTimeInSeconds);
 			hierarchySystem.Update(elapsedTimeInSeconds);
-			physicsSystem.Update(elapsedTimeInSeconds);
 			renderer.Render();
 			glFlush();
 			SwapBuffers(hDC);

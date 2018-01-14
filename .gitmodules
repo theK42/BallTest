@@ -16,3 +16,6 @@
 [submodule "KEngineOpenGL"]
 	path = KEngineOpenGL
 	url = git@bitbucket.org:theK42/kengineopengl.git
+[submodule "kenginebox2d"]
+	path = kenginebox2d
+	url = git@bitbucket.org:theK42/kenginebox2d.git

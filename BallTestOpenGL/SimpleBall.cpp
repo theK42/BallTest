@@ -13,21 +13,20 @@ SimpleBall::~SimpleBall()
 	Deinit();
 }
 
-void SimpleBall::Init(KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::PhysicsSystem * physicsSystem, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineOpenGL::SpriteRenderer * renderer, SpriteFactory * spriteFactory, KEngine2D::Point position, KEngine2D::Point velocity, double angularVelocity, double radius, double mass)
+void SimpleBall::Init(KEngineBox2D::Box2DWorld * boxWorld, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineOpenGL::SpriteRenderer * renderer, SpriteFactory * spriteFactory, KEngine2D::Point position, KEngine2D::Point velocity, double angularVelocity, double radius, double mass)
 {
 	KEngine2D::StaticTransform initialTransform(position);
-	mMechanics.Init(mechanicsSystem, position, velocity, angularVelocity);
-
-	mBoundary.Init(&mMechanics, radius);
-	mBoundingArea.Init(&mMechanics);
+	mBoundary.Init(&initialTransform, radius);
+	mBoundingArea.Init(&initialTransform);
 	mBoundingArea.AddBoundingCircle(&mBoundary);
 
-	mPhysics.Init(physicsSystem, &mMechanics, &mBoundingArea, mass);
+	mBoxMechanics.Init(boxWorld, &mBoundingArea, mass, initialTransform, velocity, angularVelocity);
+
 
 	KEngine2D::Point modelUpperLeft = {-radius, -radius};
 	KEngine2D::StaticTransform modelTransform(modelUpperLeft);
 
-	mModelTransform.Init(hierarchySystem, &mMechanics, modelTransform); 
+	mModelTransform.Init(hierarchySystem, &mBoxMechanics, modelTransform); 
 	
 	mGraphic.Init(renderer, spriteFactory->BallSpriteForRadius(radius), &mModelTransform);
 	mInitialized = true;
@@ -36,14 +35,13 @@ void SimpleBall::Init(KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::
 void SimpleBall::Deinit()
 {
 	mGraphic.Deinit();
-	mPhysics.Deinit();
+	mBoxMechanics.Deinit();
 	mBoundary.Deinit();
-	mMechanics.Deinit();
 	mInitialized = false;
 }
 
 void SimpleBall::ApplyImpulse( KEngine2D::Point impulse )
 {
 	assert(mInitialized);
-	mPhysics.ApplyImpulse(impulse);
+	//TODO
 }

@@ -151,16 +151,14 @@ int luaopen_ball (lua_State * luaState) {
 };
 
 void BallLuaBinding::Init(lua_State * luaState,
-						  KEngine2D::MechanicsUpdater * mechanicsSystem,
-						  KEngine2D::PhysicsSystem * physicsSystem,
+						  KEngineBox2D::Box2DWorld * boxWorld,
 						  KEngine2D::HierarchyUpdater * hierarchySystem,
 						  KEngineOpenGL::SpriteRenderer * renderer,
 						  SpriteFactory * spriteFactory) {
 	assert(mInstance == nullptr);
 	mInstance = this;
 	mLuaState = luaState;
-	mMechanicsSystem = mechanicsSystem;
-	mPhysicsSystem = physicsSystem;
+	mBoxWorld = boxWorld;
 	mHierarchySystem = hierarchySystem;
 	mRenderer = renderer;
 	mSpriteFactory = spriteFactory;
@@ -186,12 +184,12 @@ void BallLuaBinding::Deinit() {
 
 SimpleBall * BallLuaBinding::NewBall(KEngine2D::Point & position, KEngine2D::Point & velocity, double angularVelocity, double radius, double mass) {
 	SimpleBall * ball = new SimpleBall();
-	ball->Init(mMechanicsSystem, mPhysicsSystem, mHierarchySystem, mRenderer, mSpriteFactory, position, velocity, angularVelocity, radius, mass);
+	ball->Init(mBoxWorld,mHierarchySystem, mRenderer, mSpriteFactory, position, velocity, angularVelocity, radius, mass);
 	return ball;
 }
 
 SimpleBox * BallLuaBinding::NewBox(KEngine2D::Point & position, KEngine2D::Point & velocity, double angularVelocity, double width, double height, double mass) {
 	SimpleBox * box = new SimpleBox();
-	box->Init(mMechanicsSystem, mPhysicsSystem, mHierarchySystem, mRenderer, mSpriteFactory, position, velocity, angularVelocity, width, height, mass);
+	box->Init(mBoxWorld, mHierarchySystem, mRenderer, mSpriteFactory, position, velocity, angularVelocity, width, height, mass);
 	return box;
 }
