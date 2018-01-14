@@ -19,3 +19,6 @@
 [submodule "kenginebox2d"]
 	path = kenginebox2d
 	url = git@bitbucket.org:theK42/kenginebox2d.git
+[submodule "KEngineBox2D"]
+	path = KEngineBox2D
+	url = git@bitbucket.org:theK42/kenginebox2d.git
