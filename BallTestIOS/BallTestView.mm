@@ -53,9 +53,8 @@
     CFTimeInterval elapsedTimeInSeconds = currentTime - previousTime;
     timer.Update(elapsedTimeInSeconds);
     luaScheduler.Update();
-    mechanicsSystem.Update(elapsedTimeInSeconds);
+    boxWorld.Update(elapsedTimeInSeconds);
     hierarchySystem.Update(elapsedTimeInSeconds);
-    physicsSystem.Update(elapsedTimeInSeconds);
     renderer.Render();
     
     
@@ -78,27 +77,29 @@
         
         luaScheduler.Init();
         timer.Init(&luaScheduler);
-        mechanicsSystem.Init();
-        physicsSystem.Init();
+        boxWorld.Init();
         hierarchySystem.Init();
         shaderFactory.Init();
-        spriteFactory.Init(&shaderFactory);
+        textureFactory.Init();
+        spriteFactory.Init(&shaderFactory, &textureFactory);
+        double width = frame.size.width;
+        double height = frame.size.height;
+        renderer.Init(width, height);
         
-        renderer.Init(frame.size.width, frame.size.height);
         
+        boxWorld.AddWall({0, 0}, {width, 0}, {0, -50});
+        boxWorld.AddWall({width, 0}, {width, height}, {50, 0});
+        boxWorld.AddWall({width, height}, {0, height}, {0, 50});
+        boxWorld.AddWall({0, height}, {0, 0}, {-50, 0});
         
         westBorder.Init(1.0f, 0.0f, 0.0f); //x = 0
-        physicsSystem.AddBoundary(&westBorder);
         eastBorder.Init(-1.0f, 0.0f, frame.size.width); //-x + WIDTH = 0
-        physicsSystem.AddBoundary(&eastBorder);
         northBorder.Init(0.0f, 1.0f, 0.0f); // y = 0
-        physicsSystem.AddBoundary(&northBorder);
         southBorder.Init(0.0f, -1.0f, frame.size.height); //-y + HEIGHT = 0
-        physicsSystem.AddBoundary(&southBorder);
         
         rendererBinding.Init(luaScheduler.GetMainState(), &renderer);
         
-        ballBinding.Init(luaScheduler.GetMainState(), &mechanicsSystem, &physicsSystem, &hierarchySystem, &renderer, &spriteFactory);
+        ballBinding.Init(luaScheduler.GetMainState(), &boxWorld, &hierarchySystem, &renderer, &spriteFactory);
         
         mainThread.Init(&luaScheduler, "script", true);
         

@@ -1,8 +1,6 @@
 #include "SimpleBall.h"
-#include "BallSprite.h"
-#include <cmath>
+#include "SpriteFactory.h"
 #include <assert.h>
-
 
 SimpleBall::SimpleBall()
 {
@@ -14,38 +12,35 @@ SimpleBall::~SimpleBall()
 	Deinit();
 }
 
-void SimpleBall::Init(KEngine2D::MechanicsUpdater * mechanicsSystem, KEngine2D::PhysicsSystem * physicsSystem, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineOpenGL::SpriteRenderer * renderer, BallSpriteFactory * spriteFactory, KEngine2D::Point position, KEngine2D::Point velocity, float radius, float mass)
+void SimpleBall::Init(KEngineBox2D::Box2DWorld * boxWorld, KEngine2D::HierarchyUpdater * hierarchySystem, KEngineOpenGL::SpriteRenderer * renderer, SpriteFactory * spriteFactory, KEngine2D::Point position, KEngine2D::Point velocity, double angularVelocity, double radius, double mass)
 {
 	KEngine2D::StaticTransform initialTransform(position);
-	mMechanics.Init(mechanicsSystem, position, velocity);
+	mBoundary.Init(&initialTransform, radius);
+	mBoundingArea.Init(&initialTransform);
+	mBoundingArea.AddBoundingCircle(&mBoundary);
 
-	mBoundary.Init(&mMechanics, radius);
-	
-	std::vector<KEngine2D::BoundingCircle *> bounds(1, &mBoundary);
+	mBoxMechanics.Init(boxWorld, &mBoundingArea, mass, initialTransform, velocity, angularVelocity);
 
-	mPhysics.Init(physicsSystem, &mMechanics, bounds, mass);
-    
-    KEngine2D::Point modelUpperLeft = {-radius, -radius};
+
+	KEngine2D::Point modelUpperLeft = {-radius, -radius};
 	KEngine2D::StaticTransform modelTransform(modelUpperLeft);
 
-	mModelTransform.Init(hierarchySystem, &mMechanics, modelTransform);
-
+	mModelTransform.Init(hierarchySystem, &mBoxMechanics, modelTransform); 
+	
 	mGraphic.Init(renderer, spriteFactory->BallSpriteForRadius(radius), &mModelTransform);
-    
 	mInitialized = true;
 }
 
 void SimpleBall::Deinit()
 {
 	mGraphic.Deinit();
-	mPhysics.Deinit();
+	mBoxMechanics.Deinit();
 	mBoundary.Deinit();
-	mMechanics.Deinit();
 	mInitialized = false;
 }
 
 void SimpleBall::ApplyImpulse( KEngine2D::Point impulse )
 {
 	assert(mInitialized);
-	mPhysics.ApplyImpulse(impulse);
+	//TODO
 }

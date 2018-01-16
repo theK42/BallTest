@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		685156641FC94E9C003788B5 /* BallTestView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6851565D1FC94E9B003788B5 /* BallTestView.mm */; };
-		685156651FC94E9C003788B5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6851565E1FC94E9B003788B5 /* Info.plist */; };
 		685156661FC94E9C003788B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 685156611FC94E9B003788B5 /* Assets.xcassets */; };
 		685156671FC94E9C003788B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 685156621FC94E9B003788B5 /* main.m */; };
 		685156681FC94E9C003788B5 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 685156631FC94E9B003788B5 /* AppDelegate.mm */; };
@@ -19,9 +18,14 @@
 		685156781FC953E8003788B5 /* libKEngineCore_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 685156561FC94E5E003788B5 /* libKEngineCore_iOS.a */; };
 		685156791FC953EE003788B5 /* libKEngineOpenGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6851565C1FC94E66003788B5 /* libKEngineOpenGL.a */; };
 		685156821FC95599003788B5 /* libLua_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 685156831FC95599003788B5 /* libLua_iOS.a */; };
-		685156861FCB83D7003788B5 /* BallSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 685156851FCB83D7003788B5 /* BallSprite.cpp */; };
 		685156921FCE7B7E003788B5 /* basic.vertex.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 685156911FCE7B7E003788B5 /* basic.vertex.glsl */; };
 		685156941FCE7D39003788B5 /* circlecolor.fragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 685156931FCE7D39003788B5 /* circlecolor.fragment.glsl */; };
+		68921E81200C7A8300A54ABF /* libKEngineBox2D_iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68921E80200C7A6F00A54ABF /* libKEngineBox2D_iOS.a */; };
+		68921E94200C81C400A54ABF /* SimpleBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68921E8E200C81C300A54ABF /* SimpleBox.cpp */; };
+		68921E95200C81C400A54ABF /* textured.fragment.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 68921E90200C81C300A54ABF /* textured.fragment.glsl */; };
+		68921E96200C81C400A54ABF /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 68921E92200C81C400A54ABF /* smile.png */; };
+		68921E97200C81C400A54ABF /* SpriteFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68921E93200C81C400A54ABF /* SpriteFactory.cpp */; };
+		68921EC1200D8D8B00A54ABF /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68921EC0200D8D8B00A54ABF /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +85,20 @@
 			remoteGlobalIDString = 6851561C1FC905A7003788B5;
 			remoteInfo = KEngineCore_iOS;
 		};
+		68921E7D200C7A6F00A54ABF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68921E77200C7A6E00A54ABF /* KEngineBox2D.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 68921D29200C5BB100A54ABF;
+			remoteInfo = KEngineBox2D_Mac;
+		};
+		68921E7F200C7A6F00A54ABF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 68921E77200C7A6E00A54ABF /* KEngineBox2D.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 68921E59200C5ECF00A54ABF;
+			remoteInfo = KEngineBox2D_iOS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -101,10 +119,16 @@
 		6851566E1FC952AD003788B5 /* BallLuaBinding.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BallLuaBinding.cpp; sourceTree = "<group>"; };
 		6851566F1FC952AD003788B5 /* BallLuaBinding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallLuaBinding.h; sourceTree = "<group>"; };
 		685156831FC95599003788B5 /* libLua_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libLua_iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		685156841FCB80ED003788B5 /* BallSprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BallSprite.h; sourceTree = "<group>"; };
-		685156851FCB83D7003788B5 /* BallSprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BallSprite.cpp; sourceTree = "<group>"; };
 		685156911FCE7B7E003788B5 /* basic.vertex.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = basic.vertex.glsl; sourceTree = "<group>"; };
 		685156931FCE7D39003788B5 /* circlecolor.fragment.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = circlecolor.fragment.glsl; sourceTree = "<group>"; };
+		68921E77200C7A6E00A54ABF /* KEngineBox2D.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KEngineBox2D.xcodeproj; path = ../KEngineBox2D/KEngineBox2D.xcodeproj; sourceTree = "<group>"; };
+		68921E8E200C81C300A54ABF /* SimpleBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimpleBox.cpp; sourceTree = "<group>"; };
+		68921E8F200C81C300A54ABF /* SpriteFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpriteFactory.h; sourceTree = "<group>"; };
+		68921E90200C81C300A54ABF /* textured.fragment.glsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = textured.fragment.glsl; sourceTree = "<group>"; };
+		68921E91200C81C400A54ABF /* SimpleBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBox.h; sourceTree = "<group>"; };
+		68921E92200C81C400A54ABF /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
+		68921E93200C81C400A54ABF /* SpriteFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpriteFactory.cpp; sourceTree = "<group>"; };
+		68921EC0200D8D8B00A54ABF /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +136,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68921EC1200D8D8B00A54ABF /* GLKit.framework in Frameworks */,
+				68921E81200C7A8300A54ABF /* libKEngineBox2D_iOS.a in Frameworks */,
 				685156821FC95599003788B5 /* libLua_iOS.a in Frameworks */,
 				685156791FC953EE003788B5 /* libKEngineOpenGL.a in Frameworks */,
 				685156781FC953E8003788B5 /* libKEngineCore_iOS.a in Frameworks */,
@@ -125,10 +151,15 @@
 		685155511FC8BA03003788B5 = {
 			isa = PBXGroup;
 			children = (
+				68921E8E200C81C300A54ABF /* SimpleBox.cpp */,
+				68921E91200C81C400A54ABF /* SimpleBox.h */,
+				68921E92200C81C400A54ABF /* smile.png */,
+				68921E93200C81C400A54ABF /* SpriteFactory.cpp */,
+				68921E8F200C81C300A54ABF /* SpriteFactory.h */,
+				68921E90200C81C300A54ABF /* textured.fragment.glsl */,
+				68921E77200C7A6E00A54ABF /* KEngineBox2D.xcodeproj */,
 				685156911FCE7B7E003788B5 /* basic.vertex.glsl */,
 				685156931FCE7D39003788B5 /* circlecolor.fragment.glsl */,
-				685156841FCB80ED003788B5 /* BallSprite.h */,
-				685156851FCB83D7003788B5 /* BallSprite.cpp */,
 				6851566E1FC952AD003788B5 /* BallLuaBinding.cpp */,
 				6851566F1FC952AD003788B5 /* BallLuaBinding.h */,
 				685156691FC94F30003788B5 /* SimpleBall.cpp */,
@@ -160,6 +191,7 @@
 		685155881FC8BB8A003788B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				68921EC0200D8D8B00A54ABF /* GLKit.framework */,
 				685156831FC95599003788B5 /* libLua_iOS.a */,
 			);
 			name = Frameworks;
@@ -187,6 +219,15 @@
 			isa = PBXGroup;
 			children = (
 				6851565C1FC94E66003788B5 /* libKEngineOpenGL.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		68921E78200C7A6E00A54ABF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				68921E7E200C7A6F00A54ABF /* libKEngineBox2D_Mac.a */,
+				68921E80200C7A6F00A54ABF /* libKEngineBox2D_iOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,6 +287,10 @@
 					ProjectRef = 685156431FC94E21003788B5 /* KEngine2D.xcodeproj */;
 				},
 				{
+					ProductGroup = 68921E78200C7A6E00A54ABF /* Products */;
+					ProjectRef = 68921E77200C7A6E00A54ABF /* KEngineBox2D.xcodeproj */;
+				},
+				{
 					ProductGroup = 6851564F1FC94E5E003788B5 /* Products */;
 					ProjectRef = 6851564E1FC94E5E003788B5 /* KEngineCore.xcodeproj */;
 				},
@@ -297,6 +342,20 @@
 			remoteRef = 6851565B1FC94E66003788B5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		68921E7E200C7A6F00A54ABF /* libKEngineBox2D_Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKEngineBox2D_Mac.a;
+			remoteRef = 68921E7D200C7A6F00A54ABF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		68921E80200C7A6F00A54ABF /* libKEngineBox2D_iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKEngineBox2D_iOS.a;
+			remoteRef = 68921E7F200C7A6F00A54ABF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -305,9 +364,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				685156941FCE7D39003788B5 /* circlecolor.fragment.glsl in Resources */,
-				685156651FC94E9C003788B5 /* Info.plist in Resources */,
 				685156661FC94E9C003788B5 /* Assets.xcassets in Resources */,
 				6851566D1FC94F42003788B5 /* script.lua in Resources */,
+				68921E95200C81C400A54ABF /* textured.fragment.glsl in Resources */,
+				68921E96200C81C400A54ABF /* smile.png in Resources */,
 				685156921FCE7B7E003788B5 /* basic.vertex.glsl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,11 +380,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				685156701FC952AD003788B5 /* BallLuaBinding.cpp in Sources */,
-				685156861FCB83D7003788B5 /* BallSprite.cpp in Sources */,
+				68921E97200C81C400A54ABF /* SpriteFactory.cpp in Sources */,
 				6851566B1FC94F30003788B5 /* SimpleBall.cpp in Sources */,
 				685156671FC94E9C003788B5 /* main.m in Sources */,
 				685156681FC94E9C003788B5 /* AppDelegate.mm in Sources */,
 				685156641FC94E9C003788B5 /* BallTestView.mm in Sources */,
+				68921E94200C81C400A54ABF /* SimpleBox.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +524,7 @@
 					../KEngineOpenGL,
 					../KEngine2D,
 					../KEngineCore,
+					../KEngineBox2D,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -482,6 +544,7 @@
 					../KEngineOpenGL,
 					../KEngine2D,
 					../KEngineCore,
+					../KEngineBox2D,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

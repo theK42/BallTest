@@ -15,17 +15,17 @@
 #include <OpenGLES/ES3/glext.h>
 #include "SpriteRenderer.h"
 #include "StaticTransform2D.h"
-#include "MechanicalTransform2D.h"
 #include "HierarchicalTransform2D.h"
 #include "Boundaries2D.h"
-#include "Physics2D.h"
+#include "Box2DTransform.h"
 #include "SimpleBall.h"
 #include "RendererLuaBinding.h"
 #include "BallLuaBinding.h"
 #include "LuaScheduler.h"
 #include "Timer.h"
 #include "ShaderFactory.h"
-#include "BallSprite.h"
+#include "TextureFactory.h"
+#include "SpriteFactory.h"
 
 @interface BallTestView : UIView {
     CAEAGLLayer* _eaglLayer;
@@ -38,11 +38,11 @@
     KEngineCore::LuaScheduler       luaScheduler;
     KEngineCore::Timer              timer;
     KEngine2D::HierarchyUpdater     hierarchySystem;
-    KEngine2D::MechanicsUpdater     mechanicsSystem;
-    KEngine2D::PhysicsSystem        physicsSystem;
+    KEngineBox2D::Box2DWorld        boxWorld;
     KEngineOpenGL::SpriteRenderer   renderer;
     KEngineOpenGL::ShaderFactory    shaderFactory;
-    BallSpriteFactory               spriteFactory;
+    KEngineOpenGL::TextureFactory   textureFactory;
+    SpriteFactory                   spriteFactory;
     
     KEngine2D::RendererBinding      rendererBinding;
     BallLuaBinding                  ballBinding;
