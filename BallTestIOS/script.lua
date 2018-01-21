@@ -40,8 +40,8 @@ function randomBox()
 end
 
 while doBalls do 
-	--randomBox();
-	--timer.waits(1);
+	randomBox();
+	timer.waits(1);
 	randomBall();
 	timer.waits(1);
 end
