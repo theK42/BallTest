@@ -1,4 +1,4 @@
-#version 460
+#version 330
 attribute vec4 Position;
 attribute vec4 VertexColor;
 attribute vec2 TextureCoordinates;

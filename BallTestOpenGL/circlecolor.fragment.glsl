@@ -1,4 +1,4 @@
-#version 460
+#version 330
 varying lowp vec4 DestinationColor;
 varying lowp vec2 DestinationTexture;
 
