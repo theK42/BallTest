@@ -26,7 +26,6 @@ private:
     std::map<int, KEngineOpenGL::Sprite> mBallSprites;
 	std::map<std::pair<int, int>, KEngineOpenGL::Sprite> mBoxSprites;
     bool  mInitialized {false};
-    GLint mBallShaderProgram;
     
     KEngineOpenGL::ShaderFactory * mShaderFactory;
 	KEngineOpenGL::TextureFactory * mTextureFactory;
