@@ -1,23 +1,26 @@
 [submodule "KEngineCore"]
 	path = KEngineCore
-	url = git@bitbucket.org:theK42/kenginecore.git
+url=git@github.com:theK42/KEngineCore.git
 [submodule "KEngine2D"]
 	path = KEngine2D
-	url = git@bitbucket.org:theK42/kengine2d.git
+url=git@github.com:theK42/KEngine2D.git
 [submodule "KEngineMac"]
 	path = KEngineMac
 	url = git@bitbucket.org:theK42/kenginemac.git
 [submodule "KEngineWindows"]
 	path = KEngineWindows
-	url = git@bitbucket.org:theK42/kenginewindows.git
+url=git@github.com:theK42/KEngineWindows.git
 [submodule "KEngineCurses"]
 	path = KEngineCurses
-	url = git@bitbucket.org:theK42/kenginecurses.git
+url=git@github.com:theK42/KEngineCurses.git
 [submodule "KEngineOpenGL"]
 	path = KEngineOpenGL
-	url = git@bitbucket.org:theK42/kengineopengl.git
+url=git@github.com:theK42/KEngineOpenGL.git
 [submodule "KEngineBox2D"]
 	
 	path = KEngineBox2D
 	
-	url = git@bitbucket.org:theK42/kenginebox2d.git
+url=git@github.com:theK42/KEngineBox2D.git
+[submodule "KEngineVulkan"]
+	path = KEngineVulkan
+	url = git@github.com:theK42/KEngineVulkan.git
