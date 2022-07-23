@@ -1,14 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
@@ -17,210 +12,404 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0EDFE6C1-8C29-42B9-B967-CAFAB8859460}</ProjectGuid>
+    <ProjectGuid>{5F37394F-F93B-3000-A6BE-78282EA3B617}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>BallTestOpenGL</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>BallTestOpenGL</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
   </ImportGroup>
-  <ImportGroup Label="Shared">
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\thek4\Documents\balltest\BallTestOpenGL\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">BallTestOpenGL.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">BallTestOpenGL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\thek4\Documents\balltest\BallTestOpenGL\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">BallTestOpenGL.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">BallTestOpenGL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\thek4\Documents\balltest\BallTestOpenGL\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">BallTestOpenGL.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">BallTestOpenGL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\thek4\Documents\balltest\BallTestOpenGL\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">BallTestOpenGL.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">BallTestOpenGL</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>false</LinkIncremental>
-  </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>./glew2.1.0/include;../KEngineOpenGL;../KEngine2D;../KEngineCore;../KEngineCore/Lua;../KEngineBox2D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-    </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <LinkStatus>false</LinkStatus>
-      <ShowProgress>LinkVerbose</ShowProgress>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/thek4/Documents/balltest/_deps/boost-src"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>./glew2.1.0/include;../KEngineOpenGL;../KEngine2D;../KEngineCore;../KEngineCore/Lua;../KEngineBox2D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-    </ClCompile>
-    <Link>
-      <SubSystem>Windows</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
-      <AdditionalIncludeDirectories>./glew2.1.0/include;../KEngineOpenGL;../KEngine2D;../KEngineCore;../KEngineCore/Lua;../KEngineBox2D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <IncludePaths>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
     <Link>
-      <SubSystem>Windows</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>..\KEngineCore\Debug\KEngineCore.lib;..\KEngine2D\Debug\KEngine2D.lib;..\KEngineBox2D\Debug\KEngineBox2D.lib;..\KEngineOpenGL\Debug\KEngineOpenGL.lib;..\KEngineBox2D\Box2D\bin\Debug\box2d.lib;..\KEngine2D\Debug\KEngine2D.lib;..\KEngineCore\Debug\KEngineCore.lib;..\KEngineCore\lua-cmake\Debug\lua.lib;..\KEngineOpenGL\SOIL\Debug\soil.lib;..\KEngineOpenGL\glad\src\Debug\glad.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/thek4/Documents/balltest/BallTestOpenGL/Debug/BallTestOpenGL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/thek4/Documents/balltest/BallTestOpenGL/Debug/BallTestOpenGL.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/thek4/Documents/balltest/_deps/boost-src"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>./glew2.1.0/include;../KEngineOpenGL;../KEngine2D;../KEngineCore;../KEngineCore/Lua;../KEngineBox2D;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_DISABLE_ASSERT;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_DISABLE_ASSERT;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_DISABLE_ASSERT;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <IncludePaths>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
     <Link>
+      <AdditionalDependencies>..\KEngineCore\Release\KEngineCore.lib;..\KEngine2D\Release\KEngine2D.lib;..\KEngineBox2D\Release\KEngineBox2D.lib;..\KEngineOpenGL\Release\KEngineOpenGL.lib;..\KEngineBox2D\Box2D\bin\Release\box2d.lib;..\KEngine2D\Release\KEngine2D.lib;..\KEngineCore\Release\KEngineCore.lib;..\KEngineCore\lua-cmake\Release\lua.lib;..\KEngineOpenGL\SOIL\Release\soil.lib;..\KEngineOpenGL\glad\src\Release\glad.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/thek4/Documents/balltest/BallTestOpenGL/Release/BallTestOpenGL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/thek4/Documents/balltest/BallTestOpenGL/Release/BallTestOpenGL.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/thek4/Documents/balltest/_deps/boost-src"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <IncludePaths>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\KEngineCore\MinSizeRel\KEngineCore.lib;..\KEngine2D\MinSizeRel\KEngine2D.lib;..\KEngineBox2D\MinSizeRel\KEngineBox2D.lib;..\KEngineOpenGL\MinSizeRel\KEngineOpenGL.lib;..\KEngineBox2D\Box2D\bin\MinSizeRel\box2d.lib;..\KEngine2D\MinSizeRel\KEngine2D.lib;..\KEngineCore\MinSizeRel\KEngineCore.lib;..\KEngineCore\lua-cmake\MinSizeRel\lua.lib;..\KEngineOpenGL\SOIL\MinSizeRel\soil.lib;..\KEngineOpenGL\glad\src\MinSizeRel\glad.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/thek4/Documents/balltest/BallTestOpenGL/MinSizeRel/BallTestOpenGL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/thek4/Documents/balltest/BallTestOpenGL/MinSizeRel/BallTestOpenGL.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/thek4/Documents/balltest/_deps/boost-src"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <IncludePaths>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineOpenGL;C:\Users\thek4\Documents\balltest\_deps\boost-src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\KEngineCore\RelWithDebInfo\KEngineCore.lib;..\KEngine2D\RelWithDebInfo\KEngine2D.lib;..\KEngineBox2D\RelWithDebInfo\KEngineBox2D.lib;..\KEngineOpenGL\RelWithDebInfo\KEngineOpenGL.lib;..\KEngineBox2D\Box2D\bin\RelWithDebInfo\box2d.lib;..\KEngine2D\RelWithDebInfo\KEngine2D.lib;..\KEngineCore\RelWithDebInfo\KEngineCore.lib;..\KEngineCore\lua-cmake\RelWithDebInfo\lua.lib;..\KEngineOpenGL\SOIL\RelWithDebInfo\soil.lib;..\KEngineOpenGL\glad\src\RelWithDebInfo\glad.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/thek4/Documents/balltest/BallTestOpenGL/RelWithDebInfo/BallTestOpenGL.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/thek4/Documents/balltest/BallTestOpenGL/RelWithDebInfo/BallTestOpenGL.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
+    <CustomBuild Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/thek4/Documents/balltest/BallTestOpenGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/thek4/Documents/balltest -BC:/Users/thek4/Documents/balltest --check-stamp-file C:/Users/thek4/Documents/balltest/BallTestOpenGL/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\thek4\Documents\balltest\BallTestOpenGL\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/thek4/Documents/balltest/BallTestOpenGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/thek4/Documents/balltest -BC:/Users/thek4/Documents/balltest --check-stamp-file C:/Users/thek4/Documents/balltest/BallTestOpenGL/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\thek4\Documents\balltest\BallTestOpenGL\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/thek4/Documents/balltest/BallTestOpenGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/thek4/Documents/balltest -BC:/Users/thek4/Documents/balltest --check-stamp-file C:/Users/thek4/Documents/balltest/BallTestOpenGL/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\thek4\Documents\balltest\BallTestOpenGL\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/thek4/Documents/balltest/BallTestOpenGL/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/thek4/Documents/balltest -BC:/Users/thek4/Documents/balltest --check-stamp-file C:/Users/thek4/Documents/balltest/BallTestOpenGL/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\thek4\Documents\balltest\BallTestOpenGL\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BallLuaBinding.h" />
-    <ClInclude Include="SpriteFactory.h" />
-    <ClInclude Include="BallTestOpenGL.h" />
-    <ClInclude Include="Resource.h" />
-    <ClInclude Include="SimpleBall.h" />
-    <ClInclude Include="SimpleBox.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="BallLuaBinding.cpp" />
-    <ClCompile Include="SpriteFactory.cpp" />
-    <ClCompile Include="BallTestOpenGL.cpp" />
-    <ClCompile Include="SimpleBall.cpp" />
-    <ClCompile Include="SimpleBox.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="BallTestOpenGL.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="BallTestOpenGL.ico" />
-    <Image Include="small.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KEngine2D\KEngine2D.vcxproj">
-      <Project>{ce87ba5a-9702-488d-b351-84df10176776}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\KEngineBox2D\KEngineBox2D.vcxproj">
-      <Project>{a25357d6-1594-40c4-b2a4-dceb07b36734}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\KEngineCore\KEngineCore.vcxproj">
-      <Project>{3a2cf9b7-1e0f-4bbd-8d30-aa3486e543ab}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\KEngineCore\Lua\Lua.vcxproj">
-      <Project>{162d249d-152e-42ad-9d7c-fc40ca25705b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\KEngineOpenGL\glew-2.1.0\build\vc12\glew_static.vcxproj">
-      <Project>{664e6f0d-6784-4760-9565-d54f8eb1edf4}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\KEngineOpenGL\KEngineOpenGL.vcxproj">
-      <Project>{04a2f0dd-9cb1-40bc-86b5-a8147b1d3132}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="basic.vertex.glsl" />
-    <None Include="circlecolor.fragment.glsl" />
-    <None Include="script.lua" />
-    <None Include="textured.fragment.glsl">
-      <FileType>Document</FileType>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DeploymentContent>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
-      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\BallLuaBinding.h" />
+    <ClCompile Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\BallLuaBinding.cpp" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\BallTestOpenGL.h" />
+    <ClCompile Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\BallTestOpenGL.cpp" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\Resource.h" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\SimpleBall.h" />
+    <ClCompile Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\SimpleBall.cpp" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\SimpleBox.h" />
+    <ClCompile Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\SimpleBox.cpp" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\SpriteFactory.h" />
+    <ClCompile Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\SpriteFactory.cpp" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\stdafx.h" />
+    <ClCompile Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\stdafx.cpp" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\targetver.h" />
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\basic.vertex.glsl">
     </None>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\circlecolor.fragment.glsl">
+    </None>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\textured.fragment.glsl">
+    </None>
+    <Image Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\smile.png">
+    </Image>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\script.lua">
+    </None>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\BallTestOpenGL.ico">
+    </None>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\small.ico">
+    </None>
+    <ResourceCompile Include="C:\Users\thek4\Documents\balltest\BallTestOpenGL\BallTestOpenGL.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\ZERO_CHECK.proj">
+      <Project>{EB027DB5-11C6-36BB-AC67-C5391205E89B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngine2D\KEngine2D.vcxproj">
+      <Project>{5774B449-BDCE-34E5-845F-10FF8477B3B4}</Project>
+      <Name>KEngine2D</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineBox2D\KEngineBox2D.vcxproj">
+      <Project>{DDAEB43B-800E-3153-9BE0-D9140B5EAC8C}</Project>
+      <Name>KEngineBox2D</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineCore\KEngineCore.vcxproj">
+      <Project>{2AA7F043-045F-3471-ABD4-E4714ED4EE5C}</Project>
+      <Name>KEngineCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineOpenGL\KEngineOpenGL.vcxproj">
+      <Project>{FC639012-345C-34EB-9D29-EE8289B60C2A}</Project>
+      <Name>KEngineOpenGL</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineBox2D\Box2D\src\box2d.vcxproj">
+      <Project>{8563F9ED-8499-3061-8A57-6019CD02E881}</Project>
+      <Name>box2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineOpenGL\glad\src\glad.vcxproj">
+      <Project>{01C66098-D21D-3881-A16B-757C52607AC4}</Project>
+      <Name>glad</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\lua.vcxproj">
+      <Project>{1AC3D83F-DDDB-3547-96AE-82F466415433}</Project>
+      <Name>lua</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineOpenGL\SOIL\soil.vcxproj">
+      <Project>{CF855D29-E86C-3F77-9315-9F72651AF3C3}</Project>
+      <Name>soil</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
   </ImportGroup>
 </Project>

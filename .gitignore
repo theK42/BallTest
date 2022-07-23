@@ -54,3 +54,5 @@ Debug
 Release
 DerivedData
 *.ipch
+_deps/
+CMakeFiles/

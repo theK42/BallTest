@@ -129,7 +129,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 		return 0;
 	}
 	
-	KEngineOpenGL::InitializeGlew();
+	KEngineOpenGL::InitializeGlad();
 
 	KEngineCore::LuaScheduler       luaScheduler;
 	KEngineCore::Timer              timer;
