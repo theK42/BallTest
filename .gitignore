@@ -56,3 +56,4 @@ DerivedData
 *.ipch
 _deps/
 CMakeFiles/
+*.spv

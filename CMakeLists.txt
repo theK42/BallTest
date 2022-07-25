@@ -10,5 +10,5 @@ add_subdirectory(KEngineOpenGL)
 add_subdirectory(BallTestOpenGL)
 
 
-#add_subdirectory(KEngineVulkan)
-#add_subdirectory(BallTestVulkan)
+add_subdirectory(KEngineVulkan)
+add_subdirectory(BallTestVulkan)

@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A6C0FA5E-0635-30D6-A291-79E8E93DF1E3}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>BallTestVulkan</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">BallTestVulkan.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">BallTestVulkan</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">BallTestVulkan.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">BallTestVulkan</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">BallTestVulkan.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">BallTestVulkan</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">BallTestVulkan.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">BallTestVulkan</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/thek4/Documents/balltest/_deps/boost-src" /external:I "C:/VulkanSDK/1.3.216.0/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <IncludePaths>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\KEngineCore\Debug\KEngineCore.lib;..\KEngine2D\Debug\KEngine2D.lib;..\KEngineBox2D\Debug\KEngineBox2D.lib;..\KEngineVulkan\Debug\KEngineVulkan.lib;..\KEngineBox2D\Box2D\bin\Debug\box2d.lib;..\KEngine2D\Debug\KEngine2D.lib;..\KEngineCore\Debug\KEngineCore.lib;..\KEngineCore\lua-cmake\Debug\lua.lib;..\KEngineVulkan\VulkanMemoryAllocator\src\Debug\VulkanMemoryAllocatord.lib;C:\VulkanSDK\1.3.216.0\Lib\vulkan-1.lib;C:\VulkanSDK\1.3.216.0\Lib\vulkan-1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/thek4/Documents/balltest/BallTestVulkan/Debug/BallTestVulkan.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/thek4/Documents/balltest/BallTestVulkan/Debug/BallTestVulkan.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/thek4/Documents/balltest/_deps/boost-src" /external:I "C:/VulkanSDK/1.3.216.0/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_DISABLE_ASSERT;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_DISABLE_ASSERT;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_DISABLE_ASSERT;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <IncludePaths>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\KEngineCore\Release\KEngineCore.lib;..\KEngine2D\Release\KEngine2D.lib;..\KEngineBox2D\Release\KEngineBox2D.lib;..\KEngineVulkan\Release\KEngineVulkan.lib;..\KEngineBox2D\Box2D\bin\Release\box2d.lib;..\KEngine2D\Release\KEngine2D.lib;..\KEngineCore\Release\KEngineCore.lib;..\KEngineCore\lua-cmake\Release\lua.lib;..\KEngineVulkan\VulkanMemoryAllocator\src\Release\VulkanMemoryAllocator.lib;C:\VulkanSDK\1.3.216.0\Lib\vulkan-1.lib;C:\VulkanSDK\1.3.216.0\Lib\vulkan-1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/thek4/Documents/balltest/BallTestVulkan/Release/BallTestVulkan.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/thek4/Documents/balltest/BallTestVulkan/Release/BallTestVulkan.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/thek4/Documents/balltest/_deps/boost-src" /external:I "C:/VulkanSDK/1.3.216.0/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <IncludePaths>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\KEngineCore\MinSizeRel\KEngineCore.lib;..\KEngine2D\MinSizeRel\KEngine2D.lib;..\KEngineBox2D\MinSizeRel\KEngineBox2D.lib;..\KEngineVulkan\MinSizeRel\KEngineVulkan.lib;..\KEngineBox2D\Box2D\bin\MinSizeRel\box2d.lib;..\KEngine2D\MinSizeRel\KEngine2D.lib;..\KEngineCore\MinSizeRel\KEngineCore.lib;..\KEngineCore\lua-cmake\MinSizeRel\lua.lib;..\KEngineVulkan\VulkanMemoryAllocator\src\MinSizeRel\VulkanMemoryAllocators.lib;C:\VulkanSDK\1.3.216.0\Lib\vulkan-1.lib;C:\VulkanSDK\1.3.216.0\Lib\vulkan-1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/thek4/Documents/balltest/BallTestVulkan/MinSizeRel/BallTestVulkan.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/thek4/Documents/balltest/BallTestVulkan/MinSizeRel/BallTestVulkan.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /external:I "C:/Users/thek4/Documents/balltest/_deps/boost-src" /external:I "C:/VulkanSDK/1.3.216.0/Include"</AdditionalOptions>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ExternalWarningLevel>TurnOffAllWarnings</ExternalWarningLevel>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <MASM>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;BOOST_ALL_NO_LIB=1;BOOST_SYSTEM_NO_DEPRECATED;BOOST_THREAD_VERSION=4;BOOST_THREAD_USES_CHRONO;BOOST_THREAD_PROVIDES_EXECUTORS;VMA_STATIC_VULKAN_FUNCTIONS=1;VMA_DYNAMIC_VULKAN_FUNCTIONS=0;VMA_DEBUG_ALWAYS_DEDICATED_MEMORY=0;VMA_DEBUG_INITIALIZE_ALLOCATIONS=0;VMA_DEBUG_GLOBAL_MUTEX=0;VMA_DEBUG_DONT_EXCEED_MAX_MEMORY_ALLOCATION_COUNT=0;VMA_RECORDING_ENABLED=0;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <IncludePaths>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(IncludePaths)</IncludePaths>
+    </MASM>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\thek4\Documents\balltest\KEngineCore;C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\include;C:\Users\thek4\Documents\balltest\KEngine2D;C:\Users\thek4\Documents\balltest\KEngineBox2D;C:\Users\thek4\Documents\balltest\KEngineVulkan;C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\include;C:\Users\thek4\Documents\balltest\_deps\boost-src;C:\VulkanSDK\1.3.216.0\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalDependencies>..\KEngineCore\RelWithDebInfo\KEngineCore.lib;..\KEngine2D\RelWithDebInfo\KEngine2D.lib;..\KEngineBox2D\RelWithDebInfo\KEngineBox2D.lib;..\KEngineVulkan\RelWithDebInfo\KEngineVulkan.lib;..\KEngineBox2D\Box2D\bin\RelWithDebInfo\box2d.lib;..\KEngine2D\RelWithDebInfo\KEngine2D.lib;..\KEngineCore\RelWithDebInfo\KEngineCore.lib;..\KEngineCore\lua-cmake\RelWithDebInfo\lua.lib;..\KEngineVulkan\VulkanMemoryAllocator\src\RelWithDebInfo\VulkanMemoryAllocatorrd.lib;C:\VulkanSDK\1.3.216.0\Lib\vulkan-1.lib;C:\VulkanSDK\1.3.216.0\Lib\vulkan-1.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/thek4/Documents/balltest/BallTestVulkan/RelWithDebInfo/BallTestVulkan.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/thek4/Documents/balltest/BallTestVulkan/RelWithDebInfo/BallTestVulkan.pdb</ProgramDataBaseFile>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\thek4\Documents\balltest\CMakeFiles\2c5e399144cb806c4212307c20a09c3b\basic.vert.spv.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating basic.vert.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe basic.vert -o basic.vert.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\basic.vert;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\basic.vert.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating basic.vert.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe basic.vert -o basic.vert.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\basic.vert;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\basic.vert.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating basic.vert.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe basic.vert -o basic.vert.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\basic.vert;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\basic.vert.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating basic.vert.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe basic.vert -o basic.vert.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\basic.vert;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\basic.vert.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\thek4\Documents\balltest\CMakeFiles\2c5e399144cb806c4212307c20a09c3b\circlecolor.frag.spv.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating circlecolor.frag.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe circlecolor.frag -o circlecolor.frag.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\circlecolor.frag;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\circlecolor.frag.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating circlecolor.frag.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe circlecolor.frag -o circlecolor.frag.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\circlecolor.frag;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\circlecolor.frag.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating circlecolor.frag.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe circlecolor.frag -o circlecolor.frag.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\circlecolor.frag;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\circlecolor.frag.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating circlecolor.frag.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe circlecolor.frag -o circlecolor.frag.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\circlecolor.frag;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\circlecolor.frag.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\thek4\Documents\balltest\CMakeFiles\2c5e399144cb806c4212307c20a09c3b\textured.frag.spv.rule">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generating textured.frag.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe textured.frag -o textured.frag.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\textured.frag;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\textured.frag.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generating textured.frag.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe textured.frag -o textured.frag.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\textured.frag;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\textured.frag.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Generating textured.frag.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe textured.frag -o textured.frag.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\textured.frag;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\textured.frag.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Generating textured.frag.spv</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\VulkanSDK\1.3.216.0\Bin\glslc.exe textured.frag -o textured.frag.spv
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\textured.frag;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\textured.frag.spv</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/thek4/Documents/balltest/BallTestVulkan/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/thek4/Documents/balltest -BC:/Users/thek4/Documents/balltest --check-stamp-file C:/Users/thek4/Documents/balltest/BallTestVulkan/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/thek4/Documents/balltest/BallTestVulkan/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/thek4/Documents/balltest -BC:/Users/thek4/Documents/balltest --check-stamp-file C:/Users/thek4/Documents/balltest/BallTestVulkan/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/thek4/Documents/balltest/BallTestVulkan/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/thek4/Documents/balltest -BC:/Users/thek4/Documents/balltest --check-stamp-file C:/Users/thek4/Documents/balltest/BallTestVulkan/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/thek4/Documents/balltest/BallTestVulkan/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/thek4/Documents/balltest -BC:/Users/thek4/Documents/balltest --check-stamp-file C:/Users/thek4/Documents/balltest/BallTestVulkan/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.24\Modules\FindVulkan.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\thek4\Documents\balltest\BallTestVulkan\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\BallLuaBinding.h" />
+    <ClCompile Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\BallLuaBinding.cpp" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\BallTestVulkan.h" />
+    <ClCompile Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\BallTestVulkan.cpp" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\Resource.h" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\SimpleBall.h" />
+    <ClCompile Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\SimpleBall.cpp" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\SimpleBox.h" />
+    <ClCompile Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\SimpleBox.cpp" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\SpriteFactory.h" />
+    <ClCompile Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\SpriteFactory.cpp" />
+    <ClInclude Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\targetver.h" />
+    <Image Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\smile.png">
+    </Image>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\script.lua">
+    </None>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\BallTestVulkan.ico">
+    </None>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\small.ico">
+    </None>
+    <ResourceCompile Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\BallTestVulkan.rc" />
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\basic.vert">
+    </None>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\circlecolor.frag">
+    </None>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\textured.frag">
+    </None>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\basic.vert.spv">
+    </None>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\circlecolor.frag.spv">
+    </None>
+    <None Include="C:\Users\thek4\Documents\balltest\BallTestVulkan\textured.frag.spv">
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\ZERO_CHECK.proj">
+      <Project>{EB027DB5-11C6-36BB-AC67-C5391205E89B}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngine2D\KEngine2D.vcxproj">
+      <Project>{5774B449-BDCE-34E5-845F-10FF8477B3B4}</Project>
+      <Name>KEngine2D</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineBox2D\KEngineBox2D.vcxproj">
+      <Project>{DDAEB43B-800E-3153-9BE0-D9140B5EAC8C}</Project>
+      <Name>KEngineBox2D</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineCore\KEngineCore.vcxproj">
+      <Project>{2AA7F043-045F-3471-ABD4-E4714ED4EE5C}</Project>
+      <Name>KEngineCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineVulkan\KEngineVulkan.vcxproj">
+      <Project>{E4CFDDAC-433C-3D77-BDB6-7F0788DAE77E}</Project>
+      <Name>KEngineVulkan</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineVulkan\VulkanMemoryAllocator\src\VulkanMemoryAllocator.vcxproj">
+      <Project>{5F12624A-E0C6-3D7A-9FFC-50520CEAB267}</Project>
+      <Name>VulkanMemoryAllocator</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineBox2D\Box2D\src\box2d.vcxproj">
+      <Project>{8563F9ED-8499-3061-8A57-6019CD02E881}</Project>
+      <Name>box2d</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\thek4\Documents\balltest\KEngineCore\lua-cmake\lua.vcxproj">
+      <Project>{1AC3D83F-DDDB-3547-96AE-82F466415433}</Project>
+      <Name>lua</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  </ImportGroup>
+</Project>
